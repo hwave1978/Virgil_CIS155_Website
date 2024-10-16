@@ -1,0 +1,8 @@
+/* Selectors by element type */
+body {
+    background-color: cornsilk;
+}
+#header {
+    font-size: very large;
+}
+
