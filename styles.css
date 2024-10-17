@@ -1,8 +1,46 @@
-/* Selectors by element type */
+
 body {
-    background-color: cornsilk;
-}
-#header {
-    font-size: very large;
+    font-family: Arial, sans-serif;
+    font-size: 100%; 
+    background-color: #f0f0f0; /* Light background for contrast */
+    color: black;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;    
 }
 
+img {
+    display: block; /* Makes the image a block element */
+    margin: 0 auto; /* Automatically adjusts margins to center */
+    width: 20%; /* Image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* ID Selector begins with a # to target a specific ID */
+#A_Visual {
+    color: #DC143C;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 225%;
+    text-align: center;
+}
+
+#Follow_the {
+    color: #DC143C;
+    font-family: 'Gill Sans' , 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 155%;
+}
+
+/* Element Selector. This selector "a" refers to href link color throughout the site. */
+a {
+    color: #0000FF; /*unvisited link color*/
+    
+}
+/* Element Selector. This selector "a:visited" refers to href link color after clicking link. */
+a:visited {
+    color: #0000FF; /*visited link color*/
+}
+
+/* Class Selector. The period before the name annotates a class selector. */
+.Generic_link {
+    text-decoration: none; /* Removed the underlined hyperlink Start Your Journey "Here" */ 
+}
