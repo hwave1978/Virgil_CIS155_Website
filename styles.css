@@ -44,3 +44,8 @@ a:visited {
 .Generic_link {
     text-decoration: none; /* Removed the underlined hyperlink Start Your Journey "Here" */ 
 }
+
+/* Relational Selector */
+section#tips_to_get_started>ul {
+    color: #a52a2a;
+}
