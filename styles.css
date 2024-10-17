@@ -47,5 +47,5 @@ a:visited {
 
 /* Relational Selector */
 section#tips_to_get_started>ul {
-    color: #a52a2a;
+    color: #a52a2a; /* This selection works at times when launching page, and at times not */ 
 }
