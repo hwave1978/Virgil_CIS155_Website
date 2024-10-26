@@ -1,0 +1,51 @@
+.container {
+    display: flex; 
+    background-image: url('Images/brick-pathway.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 800px; 
+    margin: 25px; 
+    color: #ffffff; 
+    padding: 20px; /* Padding for the background picture. */
+}
+
+.column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 20px; /* Space within each column */
+}
+
+.left-column {
+    border-right: 20px solid #ffffff; /* Optional border for distinction */
+}
+
+.right-column {
+    padding-left: 20px; /*left padding */
+}
+
+h1 {
+    font-size: 36px; /* Heading font size */
+}
+
+h2 {
+    font-size: 30px; /* Subheading font size */
+}
+
+p {
+    font-size: 18px; /* Paragraph font size */
+}
+
+ul {
+    font-size: 16px; /* List font size */
+}
+
+.back-link {
+    color: #09ff01; 
+    text-decoration: none; 
+    margin-top: 20px; 
+    font-size: 25px; /* Link font size */
+}
+
+.back-link:hover {
+    text-decoration: underline; 
+}

@@ -2,50 +2,93 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 100%; 
-    background-color: #f0f0f0; /* Light background for contrast */
+    background-color: #f0f0f0;
     color: black;
     text-align: left;
-    margin-left: 5%;
-    margin-right: 5%;    
+    margin-left: 10%;
+    margin-right: 0;
+    
+}
+
+header {
+    padding: 100px 20px;
+    background-image: url(images/Brick_wallpaper.jpg);
+    background-size: center; 
+    text-align: center;
+    margin-bottom: 50px;
+    border-top: 10px solid #0000ff;
+    border-bottom: 5px solid #0000FF;
+    border-left: 20px dotted #ff0000; /* Dotted left border */
+    color: transparent; /* Makes text transparent to inhibit readability */
+}
+
+
+main {
+    width: 50%;
+    height: 500px;
+    border-right: 8px dashed #ff0000; /* Dashed right border */
+    border-left: 12px double #000; /* Double left border */
+    float: left;
+    margin: 30px 10px;
+}
+
+aside {
+    margin: 100px 20px;
+    width: 40%;
+    float: right;
+    padding: 10px;
+    background-color: #ffffcc;
+    border: 4px groove #0000ff; /* Grooved border */
+    border-radius: 15px 0 0 15px; /* Irregular border radius */
 }
 
 img {
-    display: block; /* Makes the image a block element */
-    margin: 0 auto; /* Automatically adjusts margins to center */
-    width: 20%; /* Image width */
-    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: auto;
 }
 
-/* ID Selector begins with a # to target a specific ID */
 #A_Visual {
     color: #DC143C;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 225%;
+    font-size: 250%;
     text-align: center;
+    margin-top: 50px;
 }
 
 #Follow_the {
     color: #DC143C;
-    font-family: 'Gill Sans' , 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 155%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 175%;
+    margin-bottom: 50px;
 }
 
-/* Element Selector. This selector "a" refers to href link color throughout the site. */
 a {
-    color: #0000FF; /*unvisited link color*/
-    
+    color: #0000FF;
+    margin: 20px 0;
+    display: inline-block;
 }
-/* Element Selector. This selector "a:visited" refers to href link color after clicking link. */
+
 a:visited {
-    color: #0000FF; /*visited link color*/
+    color: #0000FF;
 }
 
-/* Class Selector. The period before the name annotates a class selector. */
 .Generic_link {
-    text-decoration: none; /* Removed the underlined hyperlink Start Your Journey "Here" */ 
+    text-decoration: underline;
 }
 
-/* Relational Selector */
 section#tips_to_get_started>ul {
-    color: #a52a2a; /* This selection works at times when launching page, and at times not */ 
+    color: #a52a2a;
+    margin-top: 30px;
+    padding: 20px 10px;
 }
+
+.style {
+    margin-bottom: 40px;
+    padding: 10px 30px;
+    border: 2px solid #ff00ff; /* Random border color */
+    border-style: dashed; /* Dashed border */
+    background-color: #e0e0e0;
+}
+
