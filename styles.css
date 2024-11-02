@@ -3,49 +3,61 @@ body {
     font-family: Arial, sans-serif;
     font-size: 100%; 
     background-color: #f0f0f0;
-    color: black;
+    color: #000000;
     text-align: left;
-    margin-left: 10%;
-    margin-right: 0;
-    
+    margin-left: 5%;
+    margin-right: 5%;    
 }
 
 header {
-    padding: 100px 20px;
-    background-image: url(images/Brick_wallpaper.jpg);
-    background-size: center; 
-    text-align: center;
-    margin-bottom: 50px;
-    border-top: 10px solid #0000ff;
-    border-bottom: 5px solid #0000FF;
-    border-left: 20px dotted #ff0000; /* Dotted left border */
-    color: transparent; /* Makes text transparent to inhibit readability */
+    padding: 1em;
+    margin-bottom: 1em;
+    border-top: 0.4em double #0000ff;
+    border-bottom: 0.3125em double #0000FF;     
 }
 
+#nav_menu ul { list-style-type: none; } /*This is the css for the navigation bar*/
+#nav_menu ul li {float: left;}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 22em;
+    padding: 0.9375em ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #DC143C;
+    color: white;
+    font-weight: bold;
+    border-right: 0.125em solid #f0f0f0;
+}
+
+#nav_menu ul li a.lastitem {border-right: none;}
+#nav_menu ul li a.current { color: yellow;}
 
 main {
     width: 50%;
-    height: 500px;
-    border-right: 8px dashed #ff0000; /* Dashed right border */
-    border-left: 12px double #000; /* Double left border */
     float: left;
-    margin: 30px 10px;
+    margin: 1.5625em 0.9375em;
 }
 
 aside {
-    margin: 100px 20px;
-    width: 40%;
+    margin: 7.8125em 0.9375em;
+    width: 35%;
     float: right;
-    padding: 10px;
-    background-color: #ffffcc;
-    border: 4px groove #0000ff; /* Grooved border */
-    border-radius: 15px 0 0 15px; /* Irregular border radius */
+    padding: 0.625em;
+    background-color: #ffedcc;
+    border: 0.25em groove #0000ff; /* Grooved border */
+    border-radius: 0.9375em 0 0 0.9375em; /* Irregular border radius */
+    max-height: 100vh;
+    
 }
 
 img {
     display: block;
     margin: auto;
     width: 30%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -54,19 +66,20 @@ img {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 250%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 1.125em;
+     
 }
 
 #Follow_the {
-    color: #DC143C;
+    color: 00000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 175%;
-    margin-bottom: 50px;
+    font-size: 155%;
+    margin-bottom: 1.25em;
 }
 
 a {
     color: #0000FF;
-    margin: 20px 0;
+    margin: 0.625em 0;
     display: inline-block;
 }
 
@@ -79,16 +92,28 @@ a:visited {
 }
 
 section#tips_to_get_started>ul {
-    color: #a52a2a;
-    margin-top: 30px;
-    padding: 20px 10px;
+    color: #DC143C;
+    padding: 1.25em 1em;
+}
+
+section#tips_to_get_started > ul > li {
+    margin-bottom: 1em; /* Adjust the value for desired space between bullet items */
 }
 
 .style {
-    margin-bottom: 40px;
-    padding: 10px 30px;
-    border: 2px solid #ff00ff; /* Random border color */
-    border-style: dashed; /* Dashed border */
-    background-color: #e0e0e0;
+    list-style-type: none; /* Removes bullets or numbers from aside*/
+    padding: 0em; /* Optional: default padding */
+    margin: 0em; /* Optional: default margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center    
 }
 
+.style img {
+    margin:1em 0; /* This is the style for the image, it places a margin between photos*/
+    width: 14em; 
+    height: auto; /* Maintains aspect ratio */
+    max-height: 8em; 
+    object-fit: cover;
+    max-width: 100%; 
+}   /*All of the aside images are scalable*/
