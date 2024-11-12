@@ -1,39 +1,73 @@
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 100%; 
-    background-color: #f0f0f0;
-    color: #000000;
+    font-family: 'Arial', 'Helvetica', sans-serif; 
+    font-size: 1em;  
+    line-height: 1.5;  
+    background-color: #f7f7f7;  
+    color: #333333;  
+    margin: 0;
+    padding: 0;
     text-align: left;
-    margin-left: 5%;
-    margin-right: 5%;    
 }
 
-header {
-    padding: 1em;
-    margin-bottom: 1em;
-    border-top: 0.4em double #0000ff;
-    border-bottom: 0.3125em double #0000FF;     
+#A_Visual {
+    color: #2C3E50; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.75em; 
+    font-weight: 5250; 
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-top: 2em; 
+    padding: 0.5em 1em; 
+    background-color: #f7f7f7; 
+    border-radius: 0.25em; 
+    box-shadow: 0 0.1em 0.8em #0000000d; 
 }
 
-#nav_menu ul { list-style-type: none; } /*This is the css for the navigation bar*/
-#nav_menu ul li {float: left;}
+#nav_menu {
+    position: relative; 
+    width: 100%; 
+    background-color: #ffffff; /* White background for the navbar */
+    padding: 1em 2%; 
+    margin: 0; 
+    box-shadow: 0 0.125em 0.625em #0000001a; 
+}
+
+#nav_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#nav_menu ul li {
+    display: inline-block;
+    margin-right: 2%; 
+}
 
 #nav_menu ul li a {
-    text-align: center;
-    display: block;
-    width: 22em;
-    padding: 0.9375em ;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    background-color: #DC143C;
-    color: white;
-    font-weight: bold;
-    border-right: 0.125em solid #f0f0f0;
+    color: #333333;  
+    font-weight: 525;  
+    font-size: 1.125em;  
+    transition: color 0.3s ease; 
 }
 
-#nav_menu ul li a.lastitem {border-right: none;}
-#nav_menu ul li a.current { color: yellow;}
+#nav_menu ul li a:hover {
+    color: #8E2A47;  
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    #nav_menu {
+        padding: 1em 4%;
+    }
+
+    #nav_menu ul li {
+        display: block;  /* Stack the nav items vertically on smaller screens */
+        margin-bottom: 1em; 
+    }
+}
 
 main {
     width: 50%;
@@ -42,16 +76,18 @@ main {
 }
 
 aside {
-    margin: 7.8125em 0.9375em;
-    width: 35%;
+    margin: 2em 1.5em;
+    width: 30%;
     float: right;
-    padding: 0.625em;
-    background-color: #ffedcc;
-    border: 0.25em groove #0000ff; /* Grooved border */
-    border-radius: 0.9375em 0 0 0.9375em; /* Irregular border radius */
+    padding: 1em;
+    background-color: #f9f9f9;
+    border: 0.25em solid #dcdcdc;
+    border-radius: 0.5em;
     max-height: 100vh;
-    
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
+
 
 img {
     display: block;
@@ -61,18 +97,9 @@ img {
     height: auto;
 }
 
-#A_Visual {
-    color: #DC143C;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 250%;
-    text-align: center;
-    margin-top: 1.125em;
-     
-}
-
 #Follow_the {
     color: 00000;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 155%;
     margin-bottom: 1.25em;
 }
@@ -91,19 +118,19 @@ a:visited {
     text-decoration: underline;
 }
 
-section#tips_to_get_started>ul {
-    color: #DC143C;
+section#tips_to_get_started > ul {
+    color: #8E2A47; 
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
     padding: 1.25em 1em;
 }
 
-section#tips_to_get_started > ul > li {
-    margin-bottom: 1em; /* Adjust the value for desired space between bullet items */
-}
-
 .style {
-    list-style-type: none; /* Removes bullets or numbers from aside*/
-    padding: 0em; /* Optional: default padding */
-    margin: 0em; /* Optional: default margin */
+    list-style-type: none; 
+    padding: 0em; 
+    margin: 0em; 
     display: flex;
     flex-direction: column;
     align-items: center    

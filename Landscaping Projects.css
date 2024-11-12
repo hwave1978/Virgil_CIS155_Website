@@ -1,51 +1,124 @@
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 100%; 
-    background-color: #f0f0f0;
-    color: #000000;
+    font-family: 'Arial', 'Helvetica', sans-serif; 
+    font-size: 1.125em;  
+    line-height: 1.5;  
+    background-color: #f7f7f7;  
+    color: #333333;  
+    margin: 0;
+    padding: 0;
     text-align: left;
-    margin-left: 5%;
-    margin-right: 5%;    
-}
 
-header {
-    padding: 1em;
-    margin-bottom: 1em;
-    border-top: 0.4em double #0000ff;
-    border-bottom: 0.3125em double #0000FF;     
-}
-
-#nav_menu ul { list-style-type: none; } /*This is the css for the navigation bar*/
-#nav_menu ul li {float: left;}
-
-#nav_menu ul li a {
-    text-align: center;
-    display: block;
-    width: 22em;
-    padding: 0.9375em ;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    background-color: #DC143C;
-    color: white;
-    font-weight: bold;
-    border-right: 0.125em solid #f0f0f0;
-}
-
-#nav_menu ul li a.lastitem {border-right: none;}
-#nav_menu ul li a.current { color: yellow;}
-
-main {
-    width: 50%;
-    float: left;
-    margin: 1.5625em 0.9375em;
 }
 
 #A_Visual {
-    color: #DC143C;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 250%;
+    color: #2C3E50; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.75em; 
+    font-weight: 5250; 
     text-align: center;
-    margin-top: 3.125em;
-     
+    letter-spacing: 0.02em;
+    margin-top: 2em; 
+    padding: 0.5em 1em; 
+    background-color: #f7f7f7; 
+    border-radius: 0.25em; 
+    box-shadow: 0 0.1em 0.8em #0000000d; 
+}
+
+#nav_menu {
+    position: relative; 
+    width: 100%; 
+    background-color: #ffffff; /* White background for the navbar */
+    padding: 1em 2%; 
+    margin: 0; 
+    box-shadow: 0 0.125em 0.625em #0000001a; 
+}
+
+#nav_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#nav_menu ul li {
+    display: inline-block;
+    margin-right: 2%; 
+}
+
+#nav_menu ul li a {
+    text-decoration: none;
+    color: #333333;  
+    font-weight: 525;  
+    font-size: 1.125em;  
+    transition: color 0.3s ease; 
+}
+
+#nav_menu ul li a:hover {
+    color: #8E2A47;  
+}
+
+
+@media (max-width: 768px) {
+    #nav_menu {
+        padding: 1em 4%;
+    }
+
+    #nav_menu ul li {
+        display: block;  /* Stack the nav items vertically on smaller screens */
+        margin-bottom: 1em; 
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+    box-sizing: border-box;
+    height: auto;
+    width: 50%;
+    margin-right: 5%;
+}
+
+aside {
+    margin: 2em 1.5em;
+    width: 40%;
+    float: right;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border: 0.25em solid #dcdcdc;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+}
+
+.style {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center    
+}
+
+.style-img {
+    width: 75%;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.style img:hover {
+    transform: scale(1.5);     /* Scales the image to 120% of its size */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Adds a shadow for emphasis */
 }
