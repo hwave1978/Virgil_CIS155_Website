@@ -8,6 +8,34 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 48em) {
+    #nav_menu {
+        padding: 1em 4%;
+    }
+
+    #nav_menu ul li {
+        display: block;  /* Stack the nav items vertically on smaller screens */
+        margin-bottom: 1em; 
+    }
+}
+
+@media (max-width: 48em) {
+    .content-wrapper {
+        grid-template-columns: 100%; /* Stack the columns on small screens */
+        grid-template-areas: "main" "aside";
+        padding: 1.5em /* Adjust padding for smaller devices */
+        
+    }
+    aside {
+        margin-top: 2em; 
+    }
+    main {
+        width: 100%; 
+    }
 
 }
 
@@ -34,15 +62,16 @@ body {
     box-shadow: 0 0.125em 0.625em #0000001a; 
 }
 
-#nav_menu ul {
+#nav_menu ul { /* Module 8 Changed the display from default to flex, navigation menu items (ul li) are being styled to behave in a flex-like manner. */
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;  /* Flex container: Applies flexbox layout to the <ul> */ 
+    justify-content: center; /* Aligns the navigation items (<li>) horizontally at the center */
 }
 
 #nav_menu ul li {
-    display: inline-block;
+    display: flex;
     margin-right: 2%; 
 }
 
@@ -58,39 +87,25 @@ body {
     color: #8E2A47;  
 }
 
-
-@media (max-width: 768px) {
-    #nav_menu {
-        padding: 1em 4%;
-    }
-
-    #nav_menu ul li {
-        display: block;  /* Stack the nav items vertically on smaller screens */
-        margin-bottom: 1em; 
-    }
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+main { /* Module 8 Flexbox container Main */
+    grid-area: main;
+    display: flex; /* Flex container: Enables flexbox layout for the main content area */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: flex-start;  /* Aligns items at the start (top) of the container */
+    align-items: flex-start; /* Centers items horizontally within the container */
     padding: 2em;
+    width: 95%;
     box-sizing: border-box;
-    height: auto;
-    width: 50%;
-    margin-right: 5%;
 }
 
 aside {
-    margin: 2em 1.5em;
-    width: 40%;
-    float: right;
-    padding: 1em;
+    margin: 2em ;
+    grid-area: aside;
+    padding: 2em;
     background-color: #f9f9f9;
     border: 0.25em solid #dcdcdc;
     border-radius: 0.5em;
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5em 1em #0000001a;
     overflow: hidden;
 }
 
@@ -102,12 +117,12 @@ img {
     height: auto;
 }
 
-.style {
+.style { /* Module 8 Flexbox #2 container */
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Module 8 Flexbox #2 container */
     align-items: center    
 }
 
@@ -120,12 +135,36 @@ img {
 
 .style img:hover {
     transform: scale(1.5);     /* Scales the image to 120% of its size */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Adds a shadow for emphasis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  /* Adds a shadow */
 }
 
 p {
     text-align: center;    /* Center the text below images */
-    font-size: 16px;       /* Adjust the font size */
-    max-width: 80%;        /* Optional: Limit the width of the text */
+    font-size: 16px;       
+    max-width: 80%;        
     margin: 0 auto 1em;        /* Center the text */
+}
+
+.footer {
+    width: 100%;  /* Full width footer */
+    background-color: #ffffff;  /* White background */
+    padding: 0.125em 2%;  /* Reduced padding for a thinner footer */
+    margin: 0 ;  /* Center horizontally */   
+    margin-top: auto;  /* Ensure footer sticks to the bottom if using flexbox */
+    height: 40px;  /* Control the height of the footer (adjust as needed) */
+    text-align: center;  /* Center text inside the footer */
+    color: #333333;  /* Text color */
+    box-shadow: 0 -0.125em 0.625em #0000001a;    
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 60em 30 em; /* Two columns */
+    grid-template-areas: "main aside";
+    gap: 2em; /* Space between columns */
+    padding: 0em;
+    width: 100%;
+    max-width: 105em; /* Controls the width of the screen, that effects the main and aside content on screen */
+    margin: 0 5%;
+    box-sizing: border-box;
 }

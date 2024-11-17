@@ -8,6 +8,8 @@ body {
     margin: 0;
     padding: 0;
     text-align: left;
+    width: 100%;
+    overflow-x: hidden
 }
 
 #A_Visual {
@@ -33,15 +35,16 @@ body {
     box-shadow: 0 0.125em 0.625em #0000001a; 
 }
 
-#nav_menu ul {
+#nav_menu ul { /* Module 8 Changed the display from default to flex, navigation menu items (ul li) are being styled to behave in a flex-like manner. */
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;  /* Flex container: Applies flexbox layout to the <ul> */ 
+    justify-content: center; /* Aligns the navigation items (<li>) horizontally at the center */
 }
 
 #nav_menu ul li {
-    display: inline-block;
+    display: flex;
     margin-right: 2%; 
 }
 
@@ -69,7 +72,7 @@ body {
     }
 }
 
-main {
+main { /* Module 8 Flexbox container Main on first style sheet does not have same content as the other two css pages. */
     width: 50%;
     float: left;
     margin: 1.5625em 0.9375em;
@@ -87,7 +90,6 @@ aside {
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
-
 
 img {
     display: block;
@@ -131,8 +133,8 @@ section#tips_to_get_started > ul {
     list-style-type: none; 
     padding: 0em; 
     margin: 0em; 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flex container: Applies flexbox layout to the <ul> */
+    flex-direction: column; /* Stacks child elements vertically */
     align-items: center    
 }
 
