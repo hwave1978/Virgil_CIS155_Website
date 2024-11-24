@@ -1,0 +1,52 @@
+My website needed a lot of overhaul, so i continued working to fix it in order to make it appear like a website.  I did take Stephanie's suggestions and implement them. 
+
+1.) Enhancing the navigation bar by incorporating a Resource and a Project Timeline page could improve user experience and accessibility. Including the seasonal timeline and benefits is helpful with projects like this (thinking pros/cons). I appreciate that you incorporated physical environmental elements when considering the project, i.e., where the sun is and what you use the space for.
+
+*Suggestions fo improvement: Enhancing the navigation bar by incorporating a Resource and a Project Timeline.  I improved the timeline by titling the phases, and incorporating Phases I-IV.
+
+2nd suggestion: 
+2.) For the header (#A_Visual): use a font weight of 600 instead of 5250 for standard weight scaling. 
+
+* This was a suggestion that Staphanie pointed out that was implemented. For some reason I had the font set at 5250.  The change was implemented to the A Visual Journey of a Landscape Project.
+
+By the time I looked at Jace's suggestions I had already progressed on the website and, from what I see, the screen flex's as it should when minimized.
+
+
+
+
+
+
+
+
+Jace Martinez peer review of my website:
+
+This is a peer review for Virgil Beasley.
+
+I really enjoyed your site! I did not expect websites to look this good this early. The links to other sites are helpful.
+
+Things to improve.
+
+1. I noticed that on the first page, the images do not change in size to accommodate a larger screen. Your photos on the other 2 pages do though!
+
+2. On page 2 on the right column, some of these photos were taken vertically. I think it would help to have pairs of these photos next to each other horizontally to allow room for them to expand to allow better visuals for the viewer.
+
+3. I just realized that when I scroll over some of these photos, they zoom in! Thats great. I recommend increasing the zoom on the smaller images. Being able to see all these photos showing the Lanscaping will really help tell this story.
+
+
+
+
+Stephanie Vezina peer review of my website:
+
+The design and navigation are straightforward. The images and content add personality, and the links for resources and inspiration are helpful. This very impressive hobby demands a lot of labor and a mindful skillset... are you taking clients? ;)
+
+Where can you improve? 
+
+1.) Enhancing the navigation bar by incorporating a Resource and a Project Timeline page could improve user experience and accessibility. Including the seasonal timeline and benefits is helpful with projects like this (thinking pros/cons). I appreciate that you incorporated physical environmental elements when considering the project, i.e., where the sun is and what you use the space for.
+
+*Suggestions fo improvement: Enhancing the navigation bar by incorporating a Resource and a Project Timeline.  I improved the timeline by titling the phases, and incorporating Phases I-IV.  
+
+2.) For the header (#A_Visual): use a font weight of 600 instead of 5250 for standard weight scaling. 
+
+* This was a suggestion that Staphanie pointed out that was implemented. For some reason I had the font set at 5250.  The change was implemented to the A Visual Journey of a Landscape Project. 
+
+3.) Navigation (#nav_menu): Use display: flex; justify-content: center; for centered navigation items.
