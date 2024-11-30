@@ -1,5 +1,10 @@
 
 body {
+    display: flex;
+    flex-wrap: wrap;  /* Allow elements to wrap on smaller screens */
+    justify-content: space-between;
+    gap: 1em;  /* Space between main and aside */
+    margin: 0;
     font-family: 'Arial', 'Helvetica', sans-serif; 
     font-size: 1em;  
     line-height: 1.5;  
@@ -11,23 +16,33 @@ body {
     width: 100%;
     overflow-x: hidden;
     background-image: url('images/white-brick-background.jpg'); /* Added background image */
-    background-repeat: repeat; /* Image repeating */
+    background-repeat: repeat;
 
 }
 
-/* Responsive Design for smaller screens */
-@media (max-width: 1200px) {
+/* Design for smaller screens */
+@media (max-width: 768px) {
     #nav_menu {
         padding: 1em 20px;
     }
 
     #nav_menu ul li {
-        display: block;  /* Stack the nav items vertically on smaller screens */
+        display: block;  /* Stacks the nav items vertically on smaller screens */
         margin-bottom: 1em; 
+    }
+
+    body {
+        flex-direction: column;  /* Stack elements vertically */
+    }
+
+    main, aside {
+        flex: 1 1 100%;
+        margin: 1em 0;
     }
 }
 
 #A_Visual {
+    width: 100%;
     color: #a74747; 
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.75em; 
@@ -46,7 +61,8 @@ body {
     width: 100%; 
     background-color: #ffffff; /* White background for the navbar */
     padding: 1em 2%; 
-    margin: 0; 
+    margin: 0;
+    border-radius: 0.25em; 
     box-shadow: 0 0.125em 0.625em #0000001a; 
 }
 
@@ -77,8 +93,7 @@ body {
 }
 
 main { 
-    width: 55%;
-    float: left;
+    flex: 1 1 55%;  /* Main takes up 55% of the space */
     margin: 1.5625em 0.9375em;
     background-color: #f7f7f7; /* White with 70% opacity */
     padding: 20px; /* Adjust padding as needed */
@@ -89,16 +104,19 @@ main {
 }
 
 aside {
+    flex: 1 1 30%;  /* Aside takes up 30% of the space */
     margin: 2em 1.5em;
-    min-height: 100vh;
-    width: 30%;
-    float: right;
     padding: 1em;
     background-color: #f7f7f7;
     border: 0.25em solid #dcdcdc;
     border-radius: 0.5em;    
     box-shadow: 0 0.5em 1em #0000001a;
     overflow-y: auto;
+    order: 1;
+    display: flex;  
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content:flex-start; /* Center items vertically */
 }
 
 img {
@@ -149,19 +167,6 @@ section {
     margin: 2em 0; 
 }
 
-/* Aside images */
-.style {
-    list-style-type: none; 
-    padding: 0em; 
-    margin: 0em; 
-    display: flex; /* Flex container: Applies flexbox layout to the <ul> */
-    flex-direction: column;
-    align-items: stretch; /* Stacks child elements vertically */
-    gap: 1em;
-    width: 100%;
-    
-}
-
 /* Section (main body) images */
 .style-img {
     width: 30%;
@@ -173,6 +178,49 @@ section {
 }
 
 .style-img:hover {
-    transform: scale(2.5);
+    transform: scale(2);
     transform-origin: left;    
+}
+
+/* Aside images */
+.style {
+    list-style-type: none; 
+    padding: 0em; 
+    margin: 0em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Stacks child elements vertically */
+    justify-content: flex-start;
+    gap: 1em;
+    width: 100%;
+    height: auto;
+    
+}
+
+.style-img-aside {    
+    height: auto; 
+    object-fit: cover; 
+    margin: 0;    
+    transition: transform 0.4s ease-in-out;
+    display: block; /* Ensures block-level behavior to center it */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Scale the aside images */
+.style-img-aside:hover {
+    transform: scale(2);
+    transform-origin: center; /* Focus scaling from the center */
+    
+}
+
+.style-img-aside-first {
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.style-img-aside-first:hover {
+    transform: scale(2);
+    transform-origin: center; /* Focus scaling from the center */
+    
 }
