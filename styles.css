@@ -43,7 +43,7 @@ body {
 
 #A_Visual {
     width: 100%;
-    color: #a74747; 
+    color: #ac4444; 
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.75em; 
     font-weight: 600; 
@@ -51,7 +51,7 @@ body {
     letter-spacing: 0.02em;
     margin-top: 2em; 
     padding: 0.5em 1em; 
-    background-color: #f7f7f7; 
+    background-color:#f7f7f7; 
     border-radius: 0.25em; 
     box-shadow: 0 0.1em 0.8em #0000000d; 
 }
@@ -59,7 +59,7 @@ body {
 #nav_menu {
     position: relative; 
     width: 100%; 
-    background-color: #ffffff; /* White background for the navbar */
+    background-color:#ffffff; /* White background for the navbar */
     padding: 1em 2%; 
     margin: 0;
     border-radius: 0.25em; 
@@ -81,9 +81,10 @@ body {
 }
 
 #nav_menu ul li a {
-    text-decoration: none;
-    color: #333333;  
-    font-weight: 525;  
+    text-decoration: none; /* No line undernerath nav menu titles  */
+    color: #000000;
+    font-family:sans-serif;
+    font-weight: 450;  
     font-size: 1.125em;  
     transition: color 0.3s ease; 
 }
@@ -100,7 +101,6 @@ main {
     border: 0.25em solid #dcdcdc;
     border-radius: 0.5em;    
     box-shadow: 0 0.5em 1em #0000001a;
-
 }
 
 aside {
@@ -118,13 +118,16 @@ aside {
     align-items: center; /* Center items horizontally */
     justify-content:flex-start; /* Center items vertically */
 }
-
+/* images layout */
 img {
     display: block;
     margin: auto;
     width: 35%;
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
+    border: 2px solid #000000; /* 2px solid black border around all images */
+    padding: 2px; /* Adds padding inside the border */
+    box-sizing: border-box; /* Ensures the padding and border are included in the element's total width and height */
 }
 
 section#tips_to_get_started > ul {
@@ -193,8 +196,7 @@ section {
     justify-content: flex-start;
     gap: 1em;
     width: 100%;
-    height: auto;
-    
+    height: auto;    
 }
 
 .style-img-aside {    
@@ -210,8 +212,7 @@ section {
 /* Scale the aside images */
 .style-img-aside:hover {
     transform: scale(2);
-    transform-origin: center; /* Focus scaling from the center */
-    
+    transform-origin: center; /* Focus scaling from the center */    
 }
 
 .style-img-aside-first {
@@ -221,6 +222,5 @@ section {
 
 .style-img-aside-first:hover {
     transform: scale(2);
-    transform-origin: center; /* Focus scaling from the center */
-    
+    transform-origin: center; /* Focus scaling from the center */    
 }
